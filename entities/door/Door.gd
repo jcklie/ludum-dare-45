@@ -3,13 +3,21 @@ extends StaticBody2D
 onready var collider = $"CollisionShape2D"
 onready var sprite = $"AnimatedSprite"
 
-func _process(delta):
-	pass
+var open = false
+
+func _ready():
+	sprite.connect("animation_finished", self, "_on_animation_finished")
 	
 func open():
-	sprite.animation = "open"
-	collider.disabled = true
+	if not open:
+		open = true
+		sprite.play("open")
 
 func close():
-	sprite.animation = "closed"
-	collider.disabled = false
+	if open:
+		open = false
+		sprite.play("close")
+
+	
+func _on_animation_finished():
+	collider.disabled = open
