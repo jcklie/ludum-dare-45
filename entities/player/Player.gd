@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var speed = 250
 var velocity = Vector2()
+var selected_item = null
 
 func get_input():
 	# Detect up/down/left/right keystate and only move when pressed.
@@ -15,7 +16,16 @@ func get_input():
 	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
-
+	
+	if Input.is_action_just_pressed('ui_select') and selected_item:
+		selected_item.interact()
+		
 func _physics_process(delta):
 	get_input()
-	move_and_collide(velocity * delta)
+	
+	var collision = move_and_collide(velocity * delta)
+	if collision and collision.collider.name == "Emitter":
+		selected_item = collision.collider
+	else:
+		selected_item = null
+	

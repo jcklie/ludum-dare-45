@@ -1,13 +1,10 @@
 extends StaticBody2D
 
-var MAX_RAYCAST_LENGTH = 2000
-var ray_target;
+const MAX_RAYCAST_LENGTH = 2000
 
-func rotate_left():
-	self.rotation_degrees -= 90;
-	
-func rotate_right():
-	self.rotation_degrees += 90;
+export(String) var value
+
+var ray_target
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,11 +19,26 @@ func _process(delta):
 	var ray_end_pos = global_position + emitter_direction * MAX_RAYCAST_LENGTH
 	var hit = world_phys_state.intersect_ray(global_position, ray_end_pos, [self], 5)	# impassable terrain, emitter, drain
 	
-	ray_target = to_local(hit["position"]) if "position" in hit else null
+	if not hit.empty():
+		ray_target = to_local(hit["position"])
+		
+		var collider = hit["collider"]
+		
+		if "inputs" in collider:
+			collider.inputs[value] = true
+
+
+	else:
+		ray_target = null
+		
 	update()
 	
-	self.rotation_degrees += 1
 
 func _draw():
 	if ray_target:
 		draw_line(Vector2(0,0), ray_target, Color(255, 0, 0), 5)
+		
+		
+func interact():
+	global_rotation_degrees += 90
+	

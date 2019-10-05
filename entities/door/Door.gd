@@ -11,5 +11,5 @@ func open():
 	collider.disabled = true
 
 func close():
-	sprite.animation = "close"
+	sprite.animation = "closed"
 	collider.disabled = false

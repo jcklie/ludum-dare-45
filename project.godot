@@ -26,15 +26,6 @@ window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
-[layer_names]
-
-2d_physics/layer_1="Impassable Terrain"
-2d_physics/layer_2="Passable Terrain"
-2d_physics/layer_3="Player"
-2d_physics/layer_4="Emitter"
-2d_physics/layer_5="Drain"
-2d_physics/layer_6="Ray"
-
 [rendering]
 
 quality/driver/driver_name="GLES2"

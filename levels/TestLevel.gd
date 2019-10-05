@@ -4,7 +4,7 @@ onready var drain = $"drains/Drain"
 onready var door = $"Door"
 
 func _process(delta):
-	if drain.inputs.empty():
+	if "c3" in drain.inputs:
 		door.open()
 	else:
 		door.close()
