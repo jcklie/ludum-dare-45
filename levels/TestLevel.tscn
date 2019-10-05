@@ -24,7 +24,7 @@ position = Vector2( 352, 480 )
 
 [node name="emitter" type="Node" parent="."]
 
-[node name="StaticBody2D" parent="emitter" instance=ExtResource( 5 )]
+[node name="Emitter" parent="emitter" instance=ExtResource( 5 )]
 position = Vector2( 864, 480 )
 
 [node name="Door" parent="." instance=ExtResource( 6 )]
