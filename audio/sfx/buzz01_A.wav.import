@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/buzz01_A.wav-0b5fc4749c4b70f29bfe6cdd02d496f6.sample"
+
+[deps]
+
+source_file="res://audio/sfx/buzz01_A.wav"
+dest_files=[ "res://.import/buzz01_A.wav-0b5fc4749c4b70f29bfe6cdd02d496f6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
