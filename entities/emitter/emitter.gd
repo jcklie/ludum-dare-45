@@ -8,13 +8,7 @@ var ray_target
 onready var beam = $Beam
 
 onready var asp = $AudioStreamPlayer
-onready var asp2d = $AudioStreamPlayer2D
 onready var sfx_rotate = preload("res://audio/sfx/rotate_emitter.wav")
-onready var sfx_buzz01 = preload("res://audio/sfx/buzz01_A.ogg")
-onready var sfx_buzz02 = preload("res://audio/sfx/buzz02_A.wav")
-
-func _ready():
-	asp2d.stream = sfx_buzz01
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
