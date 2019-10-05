@@ -5,10 +5,6 @@ const MAX_RAYCAST_LENGTH = 2000
 export(String) var value
 
 var ray_target
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -27,7 +23,6 @@ func _process(delta):
 		if "inputs" in collider:
 			collider.inputs[value] = true
 
-
 	else:
 		ray_target = null
 		
@@ -40,5 +35,9 @@ func _draw():
 		
 		
 func interact():
-	global_rotation_degrees += 90
-	
+	if not $Tween.is_active():
+		$Tween.interpolate_property(self, 
+			"global_rotation_degrees",
+			global_rotation_degrees, global_rotation_degrees + 90, 1,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		$Tween.start()
