@@ -4,6 +4,9 @@ const MAX_RAYCAST_LENGTH = 2000
 
 export(String) var value
 var ray_target
+
+onready var beam = $Beam
+
 onready var asp = $AudioStreamPlayer
 onready var asp2d = $AudioStreamPlayer2D
 onready var sfx_rotate = preload("res://audio/sfx/rotate_emitter.wav")
@@ -23,14 +26,14 @@ func _process(delta):
 	var hit = world_phys_state.intersect_ray(global_position, ray_end_pos, [self], 5)	# impassable terrain, emitter, drain
 	
 	if not hit.empty():
-		ray_target = to_local(hit["position"])
+		beam.aim_at(hit["position"])
 		
 		var collider = hit["collider"]
-		
 		if "inputs" in collider:
 			collider.inputs[value] = true
 	else:
 		ray_target = null
+		beam.scale = 0
 		
 	update()
 	
