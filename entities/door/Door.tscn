@@ -7,19 +7,19 @@
 [ext_resource path="res://entities/door/door_closed.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 0, 10 )
+extents = Vector2( 32, 32 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": false,
 "name": "close",
-"speed": 2.0
+"speed": 4.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": false,
 "name": "open",
-"speed": 2.0
+"speed": 4.0
 } ]
 
 [node name="Door" type="StaticBody2D"]
@@ -32,7 +32,5 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 animation = "close"
 frame = 3
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

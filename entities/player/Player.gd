@@ -29,7 +29,7 @@ func get_input():
 	# If user is pushing
 	if selected_item != null and direction != Vector2() and touched_timer > 15 \
 	   and selected_item.has_method("push"):
-		# selected_item.push(direction)	
+		selected_item.push(direction)	
 		touched_timer = 0
 		
 func _physics_process(delta):

@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends KinematicBody2D
 
 var inputs = {}
 
@@ -27,6 +27,4 @@ func _process(delta):
 func interact():
 	$Rotator.do_rorate(self, global_rotation_degrees, global_rotation_degrees + 45, .5)
 
-func push(direction):
-	$Mover.push(self, global_position, direction, .5)
 	

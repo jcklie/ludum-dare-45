@@ -1,7 +1,7 @@
 extends Node2D
 
 const LEVEL_NAME = "current_level"
-var level_number = 3
+var level_number = 4
 var level
 var goal
 
