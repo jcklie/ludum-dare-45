@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 export(String) var value
-var ray_target
 
 onready var beam = $Beam
 
@@ -16,14 +15,9 @@ func _process(delta):
 		if "inputs" in collider:
 			collider.inputs[value] = true
 	else:
-		ray_target = null
 		beam.scale = 0
 		
 	update()
 	
-func _draw():
-	if ray_target:
-		draw_line(Vector2(0,0), ray_target, Color(255, 0, 0), 5)
-
 func interact():
 	$Rotator.do_rorate(self, global_rotation_degrees, global_rotation_degrees + 45, .5)

@@ -1,0 +1,11 @@
+door unlock / open
+door lock / close
+rotate emitter
+success small
+
+
+door stepping through
+
+step sound + reverb
+
+overdrive fx falls receiver zu voll
