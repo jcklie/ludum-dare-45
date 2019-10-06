@@ -4,6 +4,9 @@ var speed = 250
 var velocity = Vector2()
 var selected_item = null
 
+func _ready():
+	Globals.player = self
+
 func get_input():
 	# Detect up/down/left/right keystate and only move when pressed.
 	velocity = Vector2()
