@@ -1,5 +1,4 @@
 extends StaticBody2D
-# TODO rename this class to SingleReceiver or something
 
 # export MIDI note as int, but create Note object at runtime
 export var midi_note_number : int = 69
