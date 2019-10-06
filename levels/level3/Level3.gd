@@ -28,4 +28,5 @@ func _process(delta):
 		goal.set_enabled(false)
 		$Traces.modulate = Globals.TRACE_DEACTIVATED
 	
+	rec_mul.check_error()
 	rec_mul.inputs.clear()
