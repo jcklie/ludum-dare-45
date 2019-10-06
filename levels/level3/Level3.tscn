@@ -157,12 +157,12 @@ z_index = 3
 
 [node name="Emitter1" parent="emitter" instance=ExtResource( 11 )]
 position = Vector2( 224, 416 )
-value = "emitter1"
+midi_note_number = 69
 
 [node name="Emitter2" parent="emitter" instance=ExtResource( 11 )]
 position = Vector2( 224, 224 )
 rotation = -1.5708
-value = "emitter2"
+midi_note_number = 76
 
 [node name="Lens" parent="." instance=ExtResource( 12 )]
 position = Vector2( 416, 416 )
@@ -171,6 +171,7 @@ position = Vector2( 416, 416 )
 
 [node name="Drain" parent="drains" instance=ExtResource( 13 )]
 position = Vector2( 640, 224 )
+midi_note_number = 999
 
 [node name="Door" parent="." instance=ExtResource( 14 )]
 position = Vector2( 864, 224 )

@@ -1,8 +1,13 @@
 extends StaticBody2D
 
-export(String) var value
+export(int) var midi_note_number
+onready var note = preload("res://logic/note.gd").Note.new(midi_note_number)
 
-onready var beam = $Beam
+var beam
+
+func _ready():
+	beam = $Beam
+	beam.set_midi_note(note)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -13,9 +18,9 @@ func _process(delta):
 		
 		var collider = hit["collider"]
 		if "inputs" in collider:
-			collider.inputs[value] = true
+			collider.inputs[midi_note_number] = true
 	else:
-		beam.scale = 0
+		beam.aim_at(null)
 		
 	update()
 	
