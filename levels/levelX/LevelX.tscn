@@ -16,8 +16,6 @@
 [ext_resource path="res://entities/door/Door.tscn" type="PackedScene" id=14]
 [ext_resource path="res://entities/goal/Goal.tscn" type="PackedScene" id=15]
 
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
@@ -153,7 +151,7 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 672, 128 )
-z_index = 3
+z_index = 1
 
 [node name="emitter" type="Node" parent="."]
 
