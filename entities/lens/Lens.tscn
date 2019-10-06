@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/lens/Lens.gd" type="Script" id=1]
 [ext_resource path="res://entities/lens/lens.png" type="Texture" id=2]
 [ext_resource path="res://entities/raycaster/Raycaster.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/beam/Beam.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/rotator/Rotator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entities/mover/Mover.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.3597
@@ -24,3 +25,5 @@ shape = SubResource( 1 )
 visible = false
 
 [node name="Rotator" parent="." instance=ExtResource( 5 )]
+
+[node name="Mover" parent="." instance=ExtResource( 6 )]
