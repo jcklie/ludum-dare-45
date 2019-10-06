@@ -1,6 +1,5 @@
 extends Node2D
 
-var enabled = true
 var asp
 onready var sprite = $Sprite
 onready var sfx_buzz01 = preload("res://audio/sfx/buzz01_A.ogg")
