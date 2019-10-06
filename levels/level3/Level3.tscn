@@ -141,7 +141,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 6/shapes = [  ]
 6/z_index = 0
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="BackgroundMap" parent="." instance=ExtResource( 2 )]
