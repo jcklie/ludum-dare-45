@@ -18,9 +18,7 @@ func _ready():
 	asp.pitch_scale = note.well_tempered_factor_from_concert_pitch()
 	asp.play()
 
-func _process(delta):
-	inputs = {}
-	
+func _process(delta):	
 	if call % Globals.AUDIO_UPDATE_FREQ == 0:
 		# taking some inspiration from audio_stream_player_2d.cpp
 		var distance_to_player = global_position.distance_to(Globals.player.global_position)

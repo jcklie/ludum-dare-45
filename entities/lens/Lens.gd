@@ -18,7 +18,7 @@ func _process(delta):
 		if "inputs" in collider:
 			for k in inputs:
 				collider.inputs[k] = true
-		
+
 	else:
 		$Beam.visible = false
 		
