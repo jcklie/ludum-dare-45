@@ -1,26 +1,21 @@
 extends KinematicBody2D
 
-var inputs = {}
+onready var beam = $Beam
 
-func _ready():
-	$Beam.visible = false
+var inputs = {}
 
 func _process(delta):
 	if inputs.empty():
 		return
 		
 	var hit = $Raycaster.raycast(global_position, global_rotation)
-	
 	if hit:
 		var collider = hit["collider"]
-		$Beam.visible = true
+		$Beam.set_enabled(true)
 		$Beam.aim_at(hit["position"])
 		if "inputs" in collider:
 			for k in inputs:
 				collider.inputs[k] = true
-
-	else:
-		$Beam.visible = false
 		
 	inputs.clear()
 
