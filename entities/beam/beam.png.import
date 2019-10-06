@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ray.png-2981d2615d89d3fd126d141a1a5e22ea.stex"
+path="res://.import/beam.png-9f1e843b4d1dc899fd07e4853de48e77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ray.png"
-dest_files=[ "res://.import/ray.png-2981d2615d89d3fd126d141a1a5e22ea.stex" ]
+source_file="res://entities/beam/beam.png"
+dest_files=[ "res://.import/beam.png-9f1e843b4d1dc899fd07e4853de48e77.stex" ]
 
 [params]
 
