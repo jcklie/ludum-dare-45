@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://levels/level4/Level4.gd" type="Script" id=1]
 [ext_resource path="res://tiles/TileMap.tscn" type="PackedScene" id=2]
@@ -6,13 +6,11 @@
 [ext_resource path="res://tiles/blue_block.png" type="Texture" id=4]
 [ext_resource path="res://tiles/door_horizontal.png" type="Texture" id=5]
 [ext_resource path="res://tiles/door_vertical.png" type="Texture" id=6]
-[ext_resource path="res://tiles/drain.png" type="Texture" id=7]
-[ext_resource path="res://tiles/source.png" type="Texture" id=8]
-[ext_resource path="res://tiles/white_block.png" type="Texture" id=9]
-[ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://entities/emitter/emitter.tscn" type="PackedScene" id=11]
-[ext_resource path="res://entities/goal/Goal.tscn" type="PackedScene" id=12]
-[ext_resource path="res://entities/lens/Lens.tscn" type="PackedScene" id=13]
+[ext_resource path="res://tiles/white_block.png" type="Texture" id=7]
+[ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://entities/emitter/emitter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://entities/goal/Goal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://entities/lens/Lens.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -98,7 +96,6 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 } ]
 3/z_index = 0
 4/name = "drain.png 4"
-4/texture = ExtResource( 7 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
@@ -114,7 +111,6 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 } ]
 4/z_index = 0
 5/name = "source.png 5"
-5/texture = ExtResource( 8 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
@@ -130,7 +126,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 } ]
 5/z_index = 0
 6/name = "white_block.png 6"
-6/texture = ExtResource( 9 )
+6/texture = ExtResource( 7 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -147,32 +143,32 @@ script = ExtResource( 1 )
 tile_set = SubResource( 7 )
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65541, 6, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 6, 0, 65546, 6, 0, 65547, 0, 0, 65548, 6, 0, 65549, 6, 0, 65550, 6, 0, 65551, 0, 0, 131072, 0, 0, 131073, 6, 0, 131074, 6, 0, 131075, 6, 0, 131076, 6, 0, 131077, 6, 0, 131078, 1, 0, 131079, 6, 0, 131080, 0, 0, 131081, 6, 0, 131082, 6, 0, 131083, 0, 0, 131084, 6, 0, 131085, 6, 0, 131086, 6, 0, 131087, 0, 0, 196608, 0, 0, 196609, 6, 0, 196610, 6, 0, 196611, 6, 0, 196612, 6, 0, 196613, 6, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 6, 0, 196618, 6, 0, 196619, 0, 0, 196620, 6, 0, 196621, 6, 0, 196622, 6, 0, 196623, 0, 0, 262144, 0, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262149, 6, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0, 262155, 6, 0, 262156, 6, 0, 262157, 6, 0, 262158, 6, 0, 262159, 0, 0, 327680, 0, 0, 327681, 6, 0, 327682, 6, 0, 327683, 6, 0, 327684, 6, 0, 327685, 6, 0, 327686, 6, 0, 327687, 6, 0, 327688, 6, 0, 327689, 6, 0, 327690, 6, 0, 327691, 0, 0, 327692, 6, 0, 327693, 6, 0, 327694, 6, 0, 327695, 0, 0, 393216, 0, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 393220, 6, 0, 393221, 6, 0, 393222, 6, 0, 393223, 6, 0, 393224, 6, 0, 393225, 6, 0, 393226, 6, 0, 393227, 0, 0, 393228, 6, 0, 393229, 6, 0, 393230, 6, 0, 393231, 0, 0, 458752, 0, 0, 458753, 6, 0, 458754, 6, 0, 458755, 6, 0, 458756, 6, 0, 458757, 6, 0, 458758, 6, 0, 458759, 6, 0, 458760, 6, 0, 458761, 6, 0, 458762, 6, 0, 458763, 0, 0, 458764, 6, 0, 458765, 6, 0, 458766, 6, 0, 458767, 0, 0, 524288, 0, 0, 524289, 6, 0, 524290, 6, 0, 524291, 6, 0, 524292, 6, 0, 524293, 6, 0, 524294, 6, 0, 524295, 6, 0, 524296, 6, 0, 524297, 6, 0, 524298, 6, 0, 524299, 0, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 10 )]
+[node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 672, 128 )
 z_index = 1
 
 [node name="emitter" type="Node" parent="."]
 
-[node name="Emitter" parent="emitter" instance=ExtResource( 11 )]
+[node name="Emitter" parent="emitter" instance=ExtResource( 9 )]
 position = Vector2( 204.486, 229.479 )
 midi_note_number = 80
 
-[node name="Emitter2" parent="emitter" instance=ExtResource( 11 )]
+[node name="Emitter2" parent="emitter" instance=ExtResource( 9 )]
 position = Vector2( 415.788, 406.7 )
 midi_note_number = 83
 
-[node name="Emitter3" parent="emitter" instance=ExtResource( 11 )]
+[node name="Emitter3" parent="emitter" instance=ExtResource( 9 )]
 position = Vector2( 113.603, 527.12 )
 midi_note_number = 87
 
 [node name="drains" type="Node" parent="."]
 
-[node name="Goal" parent="." instance=ExtResource( 12 )]
+[node name="Goal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 928, 352 )
 
 [node name="doors" type="Node" parent="."]
 
 [node name="lenses" type="Node" parent="."]
 
-[node name="Lens" parent="lenses" instance=ExtResource( 13 )]
+[node name="Lens" parent="lenses" instance=ExtResource( 11 )]
 position = Vector2( 206.758, 406.7 )

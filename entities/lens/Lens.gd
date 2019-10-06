@@ -14,10 +14,10 @@ func _process(delta):
 		if "inputs" in collider:
 			for k in inputs:
 				collider.inputs[k] = true
+				
 		$Beam.set_notes(inputs.keys())
 		$Beam.set_enabled(true)
 		$Beam.aim_at(hit["position"])
-		
 		
 	inputs.clear()
 
