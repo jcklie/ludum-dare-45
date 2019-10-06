@@ -24,7 +24,7 @@ func _process(delta):
 	if call % Globals.AUDIO_UPDATE_FREQ == 0:
 		# taking some inspiration from audio_stream_player_2d.cpp
 		var distance_to_player = global_position.distance_to(Globals.player.global_position)
-		if distance_to_player < MAX_HEARABLE_DISTANCE:
+		if distance_to_player > MAX_HEARABLE_DISTANCE:
 			asp.volume_db = -60
 		else:
 			var multiplier = 1.0 - pow(distance_to_player / MAX_HEARABLE_DISTANCE, ATTENUATION)
