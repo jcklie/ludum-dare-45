@@ -1,12 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tiles/black_block.png" type="Texture" id=1]
 [ext_resource path="res://tiles/blue_block.png" type="Texture" id=2]
 [ext_resource path="res://tiles/door_horizontal.png" type="Texture" id=3]
 [ext_resource path="res://tiles/door_vertical.png" type="Texture" id=4]
-[ext_resource path="res://tiles/drain.png" type="Texture" id=5]
-[ext_resource path="res://tiles/source.png" type="Texture" id=6]
-[ext_resource path="res://tiles/white_block.png" type="Texture" id=7]
+[ext_resource path="res://tiles/white_block.png" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -20,13 +18,7 @@ points = PoolVector2Array( 0, 22.5521, 64, 22.9539, 64, 41.0385, 0.850708, 41.03
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 22.5521, 0.850677, 41.8422, 0, 42.646, 64, 22.954, 64 )
 
-[sub_resource type="ConcavePolygonShape2D" id=5]
-segments = PoolVector2Array( 11.7014, 56.3098, 0.0469666, 42.2441, 0.0469666, 42.2441, 0, 26.169, 0, 26.169, 6.87888, 14.5145, 6.87888, 14.5145, 30.9915, 1.25256, 30.9915, 1.25256, 60.7305, 16.122, 60.7305, 16.122, 64, 33.0009, 64, 33.0009, 55.9079, 52.291, 55.9079, 52.291, 32.599, 63.5436, 32.599, 63.5436, 11.7014, 56.3098 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=5]
 0/name = "black_block.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -91,40 +83,8 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
-4/name = "drain.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
-5/name = "source.png 5"
-5/texture = ExtResource( 6 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 64, 64 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 6 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-5/z_index = 0
 6/name = "white_block.png 6"
-6/texture = ExtResource( 7 )
+6/texture = ExtResource( 5 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -135,6 +95,6 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 6/z_index = 0
 
 [node name="TileMap" type="TileMap"]
-tile_set = SubResource( 7 )
+tile_set = SubResource( 5 )
 collision_mask = 60
 format = 1

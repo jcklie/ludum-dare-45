@@ -1,7 +1,7 @@
 extends Node2D
 
 const LEVEL_NAME = "current_level"
-var level_number = 4
+var level_number = 1
 var level
 var goal
 
@@ -15,6 +15,7 @@ func _process(delta):
 	
 func _spawn_level(level_id):
 	if level:
+		level.queue_free()
 		remove_child(level)
 	
 	var level_name = "res://levels/level{id}/Level{id}.tscn"

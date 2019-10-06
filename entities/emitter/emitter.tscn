@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://entities/emitter/emitter.gd" type="Script" id=1]
-[ext_resource path="res://tiles/source.png" type="Texture" id=2]
+[ext_resource path="res://entities/emitter/emitter.png" type="Texture" id=2]
 [ext_resource path="res://entities/beam/Beam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/raycaster/Raycaster.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/rotator/Rotator.tscn" type="PackedScene" id=5]
