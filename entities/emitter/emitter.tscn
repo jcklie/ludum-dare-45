@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://entities/emitter/emitter.gd" type="Script" id=1]
 [ext_resource path="res://tiles/source.png" type="Texture" id=2]
 [ext_resource path="res://entities/beam/Beam.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/raycaster/Raycaster.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/rotator/Rotator.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.0
@@ -19,10 +21,8 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Tween" type="Tween" parent="."]
-playback_speed = 4.0
-playback/speed = 4.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-
 [node name="Beam" parent="." instance=ExtResource( 3 )]
+
+[node name="Raycaster" parent="." instance=ExtResource( 4 )]
+
+[node name="Rotator" parent="." instance=ExtResource( 5 )]

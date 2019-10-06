@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Lens.gd" type="Script" id=1]
+[ext_resource path="res://entities/lens/lens.png" type="Texture" id=2]
+[ext_resource path="res://entities/raycaster/Raycaster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/beam/Beam.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/rotator/Rotator.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 32.3597
+
+[node name="Lens" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Raycaster" parent="." instance=ExtResource( 3 )]
+
+[node name="Beam" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Rotator" parent="." instance=ExtResource( 5 )]

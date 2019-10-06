@@ -12,7 +12,7 @@ onready var sfx_buzz02 = preload("res://audio/sfx/buzz02_A.wav")
 
 func _ready():
 	asp2d.stream = sfx_buzz01
-	self.set_enabled(true)
+	# self.set_enabled(true)
 
 func aim_at(to_vec2_global):
 	sprite.scale.x = (global_position - to_vec2_global).length()

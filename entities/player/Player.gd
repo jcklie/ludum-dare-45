@@ -24,7 +24,7 @@ func _physics_process(delta):
 	get_input()
 	
 	var collision = move_and_collide(velocity * delta)
-	if collision and collision.collider.name.find("Emitter") != -1:
+	if collision and collision.collider.has_method("interact"):
 		selected_item = collision.collider
 	else:
 		selected_item = null
