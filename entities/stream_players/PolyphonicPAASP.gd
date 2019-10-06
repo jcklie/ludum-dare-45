@@ -17,6 +17,10 @@ func set_params(samples, base_volume_db, max_hearable_distance, attenuation):
 	self._attenuation = attenuation
 	
 func set_notes(notes):
+	# if new notes match current notes: nop
+	if _notes.has_all(notes) and _notes.size() == notes.size():
+		return
+	
 	# clear existing samples
 	for child in get_children():
 		child.queue_free()
@@ -35,6 +39,10 @@ func set_notes(notes):
 		
 		asp.pitch_scale = n.well_tempered_factor_from_concert_pitch()
 		self.add_child(asp)
+
+	# keep notes for next call
+	for note in notes:
+		self._notes[note] = true
 
 func set_enabled(enabled):
 	if enabled:
