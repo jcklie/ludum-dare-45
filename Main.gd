@@ -5,7 +5,12 @@ var level_number = 1
 var level
 
 func _ready():
-	_spawn_level(1)
+	pass
+	
+func _process(delta):
+	if Input.is_action_just_pressed('ui_accept'):
+		_spawn_level(level_number)
+		$SplashScreen.visible = false
 	
 func _spawn_level(level_id):
 	if level:
