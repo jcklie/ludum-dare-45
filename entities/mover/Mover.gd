@@ -11,3 +11,6 @@ func push(obj, start, direction, duration):
 		start, start + direction * TILE_SIZE, duration,
 		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$Tween.start()
+	
+func is_moving():
+	return $Tween.is_active()
