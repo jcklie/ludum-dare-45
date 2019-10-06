@@ -19,7 +19,8 @@ func _process(delta):
 		var own_position = get_parent().global_position
 		var distance_to_player = own_position.distance_to(Globals.player.global_position)
 		if distance_to_player > self._max_hearable_distance:
-			stop()
+			if playing:
+				stop()
 		else:
 			if not playing:
 				play()

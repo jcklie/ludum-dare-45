@@ -11,11 +11,13 @@ func _process(delta):
 	var hit = $Raycaster.raycast(global_position, global_rotation)
 	if hit:
 		var collider = hit["collider"]
-		$Beam.set_enabled(true)
-		$Beam.aim_at(hit["position"])
 		if "inputs" in collider:
 			for k in inputs:
 				collider.inputs[k] = true
+		$Beam.set_notes(inputs.keys())
+		$Beam.set_enabled(true)
+		$Beam.aim_at(hit["position"])
+		
 		
 	inputs.clear()
 

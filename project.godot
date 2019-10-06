@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "AudioStreamPlayer",
 "class": "PlayerAttenuatingAudioStreamPlayer",
 "language": "GDScript",
-"path": "res://entities/PlayerAttenuatingAudioStreamPlayer.gd"
+"path": "res://entities/stream_players/PlayerAttenuatingAudioStreamPlayer.gd"
 } ]
 _global_script_class_icons={
 "PlayerAttenuatingAudioStreamPlayer": ""

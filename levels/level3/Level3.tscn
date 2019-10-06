@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://levels/level3/Level3.gd" type="Script" id=1]
 [ext_resource path="res://tiles/TileMap.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://entities/receiver_multi/ReceiverMulti.tscn" type="PackedScene" id=12]
 [ext_resource path="res://entities/emitter/emitter.tscn" type="PackedScene" id=13]
 [ext_resource path="res://entities/goal/Goal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://entities/stream_players/PolyphonicPAASP.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -186,3 +187,5 @@ midi_note_number = 73
 [node name="Goal" parent="." instance=ExtResource( 14 )]
 position = Vector2( 224, 352 )
 enabled = false
+
+[node name="PolySampler" parent="Goal" instance=ExtResource( 15 )]

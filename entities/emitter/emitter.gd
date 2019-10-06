@@ -1,13 +1,12 @@
 extends StaticBody2D
 
 export(int) var midi_note_number
-onready var note = preload("res://logic/note.gd").Note.new(midi_note_number)
 
 var beam
 
 func _ready():
 	beam = $Beam
-	beam.set_midi_note(note)
+	beam.set_notes([midi_note_number])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

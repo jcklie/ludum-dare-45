@@ -2,7 +2,7 @@
 
 [ext_resource path="res://entities/beam/Beam.gd" type="Script" id=1]
 [ext_resource path="res://entities/beam/beam.png" type="Texture" id=2]
-[ext_resource path="res://entities/PlayerAttenuatingAudioStreamPlayer.gd" type="Script" id=3]
+[ext_resource path="res://entities/stream_players/PolyphonicPAASP.tscn" type="PackedScene" id=3]
 
 [node name="Beam" type="Node2D"]
 z_index = 1
@@ -15,5 +15,4 @@ texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -1, -32 )
 
-[node name="PlayerAttenuatingAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-script = ExtResource( 3 )
+[node name="PolyphonicPAASP" parent="." instance=ExtResource( 3 )]
