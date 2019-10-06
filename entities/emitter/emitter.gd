@@ -20,7 +20,7 @@ func _process(delta):
 		if "inputs" in collider:
 			collider.inputs[midi_note_number] = true
 	else:
-		beam.aim_at(null)
+		beam.set_enabled(false)
 		
 	update()
 	

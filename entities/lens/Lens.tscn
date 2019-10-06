@@ -22,7 +22,7 @@ shape = SubResource( 1 )
 [node name="Raycaster" parent="." instance=ExtResource( 3 )]
 
 [node name="Beam" parent="." instance=ExtResource( 4 )]
-visible = false
+enabled = false
 
 [node name="Rotator" parent="." instance=ExtResource( 5 )]
 
