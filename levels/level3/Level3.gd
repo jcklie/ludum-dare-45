@@ -13,7 +13,7 @@ func _ready():
 	for node in goal.get_children():
 		if node.name == "PolySampler":
 			goal_paasp = node
-	goal_paasp.set_params([sfx_howl], 0, 128, 1)
+	goal_paasp.set_params([sfx_howl], -5, 128, 1)
 	goal_paasp.set_notes(win_condition.keys())
 
 func _process(delta):
