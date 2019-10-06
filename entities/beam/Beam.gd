@@ -8,14 +8,16 @@ onready var sfx_buzz02 = preload("res://audio/sfx/buzz02_A.ogg")
 
 # TODO set note and adjust pitch
 # TODO compute distance via https://gamedev.stackexchange.com/questions/44483/how-do-i-calculate-distance-between-a-point-and-an-axis-aligned-rectangle and set audio volume
-# TODO less frequent audio updates
 
 func _ready():
 	asp.stream = sfx_buzz01
-	#self.set_enabled(true)
+	self.set_enabled(true)
 
 func aim_at(to_vec2_global):
-	sprite.scale.x = (global_position - to_vec2_global).length()
+	if to_vec2_global == null:
+		sprite.scale.x = 0
+	else:
+		sprite.scale.x = (global_position - to_vec2_global).length()
 	
 func set_enabled(enabled: bool):
 	self.enabled = enabled

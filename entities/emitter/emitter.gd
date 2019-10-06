@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-export(String) var value
+export(int) var midi_note_number
 
 onready var beam = $Beam
 
@@ -13,9 +13,9 @@ func _process(delta):
 		
 		var collider = hit["collider"]
 		if "inputs" in collider:
-			collider.inputs[value] = true
+			collider.inputs[midi_note_number] = true
 	else:
-		beam.scale = 0
+		beam.aim_at(null)
 		
 	update()
 	

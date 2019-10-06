@@ -5,7 +5,7 @@ onready var door = $Door
 
 func _process(delta):
 
-	if "emitter1" in drain.inputs and "emitter2" in drain.inputs:
+	if 69 in drain.inputs and 76 in drain.inputs:
 		door.open()
 	else:
 		door.close()
