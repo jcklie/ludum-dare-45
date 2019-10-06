@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/drain/Drain.gd" type="Script" id=1]
 [ext_resource path="res://entities/drain/drain.png" type="Texture" id=2]
 [ext_resource path="res://audio/sfx/howl01_A.ogg" type="AudioStream" id=3]
+[ext_resource path="res://entities/PlayerAttenuatingAudioStreamPlayer.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.6654
@@ -16,5 +17,6 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="PlayerAttenuatingAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+script = ExtResource( 4 )
