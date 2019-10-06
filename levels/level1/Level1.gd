@@ -8,3 +8,5 @@ func _process(delta):
 		door.open()
 	else:
 		door.close()
+		
+	drain.inputs.clear()

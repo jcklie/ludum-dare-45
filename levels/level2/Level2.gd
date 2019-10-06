@@ -9,3 +9,6 @@ func _process(delta):
 		door.open()
 	else:
 		door.close()
+		
+	drain1.inputs.clear()
+	drain4.inputs.clear()
