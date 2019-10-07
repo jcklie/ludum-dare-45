@@ -1,7 +1,7 @@
 extends Node2D
 
 const MIN_LEVEL = 1
-const MAX_LEVEL = 3
+const MAX_LEVEL = 4
 
 onready var status = "start"
 var curr_level_number
@@ -31,6 +31,7 @@ func _spawn_level(level_number):
 	if level_number > MAX_LEVEL:
 		status = "end"
 		$EndScreen.visible = true
+		level = null
 		return
 	
 	var level_name = "res://levels/level{id}/Level{id}.tscn".format({"id": level_number})

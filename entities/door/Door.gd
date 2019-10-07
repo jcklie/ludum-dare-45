@@ -6,7 +6,7 @@ onready var asp = $AudioStreamPlayer
 onready var sfx_open = preload("res://audio/sfx/door_open.wav")
 onready var sfx_close = preload("res://audio/sfx/door_close.wav")
 
-var is_open = false
+export(bool) var is_open = false
 
 func _ready():
 	sprite.connect("animation_finished", self, "_on_animation_finished")
